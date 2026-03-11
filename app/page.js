@@ -7,7 +7,7 @@ export default function Home() {
         </h1>
 
         <p style={styles.subtitle}>
-          AWS Cloud Club Sheridan College Workshop Demo
+          AWS Cloud Club Sheridan College Workshop Demo by Abhijot
         </p>
 
         <p style={styles.text}>
