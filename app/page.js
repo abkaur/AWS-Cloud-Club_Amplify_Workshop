@@ -1,66 +1,86 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main style={styles.main}>
+      <div style={styles.card}>
+        <h1 style={styles.title}>
+          Deploy &amp; Auto-Update Your First Website on AWS with Amplify CI/CD
+        </h1>
+
+        <p style={styles.subtitle}>
+          AWS Cloud Club Sheridan College Workshop Demo
+        </p>
+
+        <p style={styles.text}>
+          This simple Next.js website is connected to GitHub and deployed using
+          AWS Amplify.
+        </p>
+
+        <p style={styles.text}>
+          Any code change pushed to GitHub will automatically trigger a new
+          build and deployment.
+        </p>
+
+        <div style={styles.box}>
+          <p style={styles.boxTitle}>CI/CD Flow</p>
+          <p style={styles.boxText}>
+            Local Code → GitHub → AWS Amplify → Live Website
           </p>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
+
+const styles = {
+  main: {
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    background: "linear-gradient(to right, #4b0082, #7b2cbf)",
+    padding: "20px",
+    fontFamily: "Arial, sans-serif",
+  },
+  card: {
+    backgroundColor: "white",
+    padding: "40px",
+    borderRadius: "16px",
+    maxWidth: "800px",
+    width: "100%",
+    textAlign: "center",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
+  },
+  title: {
+    fontSize: "2.2rem",
+    marginBottom: "20px",
+    color: "#2d1b69",
+  },
+  subtitle: {
+    fontSize: "1.2rem",
+    fontWeight: "bold",
+    marginBottom: "20px",
+    color: "#5a189a",
+  },
+  text: {
+    fontSize: "1rem",
+    marginBottom: "14px",
+    color: "#333",
+    lineHeight: "1.6",
+  },
+  box: {
+    marginTop: "25px",
+    padding: "20px",
+    borderRadius: "12px",
+    backgroundColor: "#f3e8ff",
+  },
+  boxTitle: {
+    fontWeight: "bold",
+    fontSize: "1.1rem",
+    marginBottom: "10px",
+    color: "#3c096c",
+  },
+  boxText: {
+    fontSize: "1rem",
+    color: "#240046",
+  },
+};
